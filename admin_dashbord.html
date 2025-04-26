@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم</title>
+    <link rel="stylesheet" href="styles/admin-style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h2>لوحة تحكم الأدمين</h2>
+        </header>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#users">إدارة المستخدمين</a></li>
+                <li><a href="#deposits">إيداعات المستخدمين</a></li>
+                <li><a href="#plans">إدارة الخطط الاستثمارية</a></li>
+                <li><a href="#stats">الإحصائيات</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="users">
+                <h3>إدارة المستخدمين</h3>
+                <table id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>اسم المستخدم</th>
+                            <th>البريد الإلكتروني</th>
+                            <th>الحالة</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList"></tbody>
+                </table>
+            </section>
+            <section id="deposits">
+                <h3>إيداعات المستخدمين</h3>
+                <table id="depositsTable">
+                    <thead>
+                        <tr>
+                            <th>المستخدم</th>
+                            <th>المبلغ</th>
+                            <th>الحالة</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="depositList"></tbody>
+                </table>
+            </section>
+            <section id="plans">
+                <h3>إدارة الخطط الاستثمارية</h3>
+                <table id="plansTable">
+                    <thead>
+                        <tr>
+                            <th>اسم الخطة</th>
+                            <th>المبلغ</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="plansList"></tbody>
+                </table>
+            </section>
+            <section id="stats">
+                <h3>الإحصائيات</h3>
+                <div id="stats">
+                    <p>عدد المستخدمين: <span id="userCount"></span></p>
+                    <p>إجمالي الإيداعات: <span id="totalDeposits"></span></p>
+                    <p>إجمالي السحوبات: <span id="totalWithdrawals"></span></p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="scripts/admin-script.js"></script>
+</body>
